@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Playlist</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <meta content="Donald G Gray" name="author">
+    <meta content="Audio playlist where the song titles change colour when they are played or paused." name="description">
+    <meta property="og:image" content="http://audovia.com/image/Kelpies1280.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Playlist">
+    <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
+    <style type="text/css">
+      span.composer {color: #817F73; font-family: Verdana;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Verdana;}
+    </style>
+  </head>
+
+  <body>
+    <table width="450" border="1" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+            <table border="0" cellpadding="4" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="composer">J S Bach</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="composer">J S Bach</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="composer">W A Mozart</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="composer">A Vivaldi</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="composer">G F Handel</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="composer">G F Handel</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table border="0" cellpadding="4" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[1], audioArray[1])" class="song" id="song1">Prelude BWV 556</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[6], audioArray[6])" class="song" id="song6">Sheep May Safely Graze</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[2], audioArray[2])" class="song" id="song2">Recordare</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[3], audioArray[3])" class="song" id="song3">Gloria</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[4], audioArray[4])" class="song" id="song4">Zadok the Priest</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span title="play/pause" onclick="playPause(songArray[5], audioArray[5])" class="song" id="song5">Arrival of the Queen of Sheba</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <audio id="audio1" onended="onEnd(songArray[1], audioArray[1])" src="music/JSBach-Prelude-BWV556-v2R.mp3"></audio>
+    <audio id="audio2" onended="onEnd(songArray[2], audioArray[2])" src="music/Recordare.mp3"></audio>
+    <audio id="audio3" onended="onEnd(songArray[3], audioArray[3])" src="music/Gloria-Vivaldi-v3R.mp3"></audio>
+    <audio id="audio4" onended="onEnd(songArray[4], audioArray[4])" src="music/zadok.mp3"></audio>
+    <audio id="audio5" onended="onEnd(songArray[5], audioArray[5])" src="music/sheba.mp3"></audio>
+    <audio id="audio6" onended="onEnd(songArray[6], audioArray[6])" src="music/SheepMaySafelyGraze.mp3"></audio>
+
+    <script type="text/javascript">
+      var audioArray = new Array();
+      audioArray[0] = null;
+      audioArray[1] = document.getElementById("audio1");
+      audioArray[2] = document.getElementById("audio2");
+      audioArray[3] = document.getElementById("audio3");
+      audioArray[4] = document.getElementById("audio4");
+      audioArray[5] = document.getElementById("audio5");
+      audioArray[6] = document.getElementById("audio6");
+
+      var songArray = new Array();
+      songArray[0] = null;
+      songArray[1] = document.getElementById("song1");
+      songArray[2] = document.getElementById("song2");
+      songArray[3] = document.getElementById("song3");
+      songArray[4] = document.getElementById("song4");
+      songArray[5] = document.getElementById("song5");
+      songArray[6] = document.getElementById("song6");
+
+      function onEnd(song, audio)
+      {
+        song.style.color = '#551A8B';
+        audio.load();
+      }
+
+      function playPause(song, audio)
+      {
+        for (i = 1; i < songArray.length; i++)
+        {
+          if (song != songArray[i])
+          {
+            if (!audioArray[i].paused)
+            {
+              songArray[i].style.color = 'red';
+              audioArray[i].pause();
+            }
+          }
+        }
+
+        if (audio.paused)
+        {
+          song.style.color = 'green';
+          audio.play();
+        }
+        else
+        {
+          song.style.color = 'red';
+          audio.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
