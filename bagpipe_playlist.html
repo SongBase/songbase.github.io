@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Bagpipe Play Along</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <meta content="Donald G Gray" name="author">
+    <meta content="Audio playlist where the song titles change colour when they are played or paused." name="description">
+    <meta property="og:image" content="http://audovia.com/image/Kelpies1280.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bagpipe Play Along">
+    <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
+    <style type="text/css">
+      span.composer {color: #817F73; font-family: Verdana;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Verdana;}
+    </style>
+  </head>
+
+  <body>
+    <table width="450" border="0" cellpadding="4" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[1], audioArray[1])" ondblclick="onEnd(songArray[1], audioArray[1])" class="song" id="song1">Bonnie Lass of Fyvie</span>
+          </td>
+          <td>
+            <span class="composer">Traditional</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[2], audioArray[2])" ondblclick="onEnd(songArray[2], audioArray[2])" class="song" id="song2">The Sands of Kuwait</span>
+          </td>
+          <td>
+            <span class="composer">Gordon Mackenzie</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])" class="song" id="song3">On the Road to Passchendaele</span>
+          </td>
+          <td>
+            <span class="composer">Gavin Stoddart</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])" class="song" id="song4">Rocking the Baby</span>
+          </td>
+          <td>
+            <span class="composer">Traditional</span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <audio id="audio1" onended="onEnd(songArray[1], audioArray[1])" src="music/BonnieLassOfFyvie.mp3"></audio>
+    <audio id="audio2" onended="onEnd(songArray[2], audioArray[2])" src="music/TheSandsOfKuwait.mp3"></audio>
+    <audio id="audio3" onended="onEnd(songArray[3], audioArray[3])" src="music/OnTheRoadToPasschendaele.mp3"></audio>
+    <audio id="audio4" onended="onEnd(songArray[4], audioArray[4])" src="music/RockingTheBaby.mp3"></audio>
+
+
+    <script type="text/javascript">
+      var audioArray = new Array();
+      audioArray[0] = null;
+      audioArray[1] = document.getElementById("audio1");
+      audioArray[2] = document.getElementById("audio2");
+      audioArray[3] = document.getElementById("audio3");
+      audioArray[4] = document.getElementById("audio4");
+
+
+      var songArray = new Array();
+      songArray[0] = null;
+      songArray[1] = document.getElementById("song1");
+      songArray[2] = document.getElementById("song2");
+      songArray[3] = document.getElementById("song3");
+      songArray[4] = document.getElementById("song4");
+
+
+      function onEnd(song, audio)
+      {
+        song.style.color = '#551A8B';
+        audio.load();
+      }
+
+      function playPause(song, audio)
+      {
+        for (i = 1; i < songArray.length; i++)
+        {
+          if (song != songArray[i])
+          {
+            if (!audioArray[i].paused)
+            {
+              songArray[i].style.color = 'red';
+              audioArray[i].pause();
+            }
+          }
+        }
+
+        if (audio.paused)
+        {
+          song.style.color = 'green';
+          audio.play();
+        }
+        else
+        {
+          song.style.color = 'red';
+          audio.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
