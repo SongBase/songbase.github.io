@@ -67,6 +67,14 @@
             <span class="composer">Tom Muirhead</span>
           </td>
         </tr>
+        <tr>
+          <td>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[7], audioArray[7])" ondblclick="onEnd(songArray[7], audioArray[7])" class="song" id="song7">Horsbrugh Castle</span>
+          </td>
+          <td>
+            <span class="composer">Ian Hardie</span>
+          </td>
+        </tr>
       </tbody>
     </table>
 
@@ -76,6 +84,7 @@
     <audio id="audio4" onended="onEnd(songArray[4], audioArray[4])" src="music/RockingTheBaby.mp3"></audio>
     <audio id="audio5" onended="onEnd(songArray[5], audioArray[5])" src="music/PipeSergeantJohnBarclay.mp3"></audio>
     <audio id="audio6" onended="onEnd(songArray[6], audioArray[6])" src="music/TheHillsOfAlva.mp3"></audio>
+    <audio id="audio7" onended="onEnd(songArray[7], audioArray[7])" src="music/HorsbrughCastle.mp3"></audio>
 
 
     <script type="text/javascript">
@@ -87,6 +96,7 @@
       audioArray[4] = document.getElementById("audio4");
       audioArray[5] = document.getElementById("audio5");
       audioArray[6] = document.getElementById("audio6");
+      audioArray[7] = document.getElementById("audio7");
 
 
       var songArray = new Array();
@@ -97,6 +107,7 @@
       songArray[4] = document.getElementById("song4");
       songArray[5] = document.getElementById("song5");
       songArray[6] = document.getElementById("song6");
+      songArray[7] = document.getElementById("song7");
 
 
       function onEnd(song, audio)
