@@ -11,13 +11,14 @@
     <meta property="og:title" content="Bagpipe Play Along">
     <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
     <style type="text/css">
-      span.composer {color: #817F73; font-family: Verdana;}
-      span.song {color: #551A8B; cursor: pointer; font-family: Verdana;}
+      span.composer {color: #817F73; font-family: Verdana; font-size: 18px;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Verdana; font-size: 18px;}
+      span.part {color: #551A8B; cursor: pointer; font-family: Verdana; font-size: 15px;}
     </style>
   </head>
 
   <body>
-    <table width="300" border="0" cellpadding="4" cellspacing="0">
+    <table width="300" border="0" cellpadding="4" cellspacing="0" style="line-height: 1.0;">
       <tbody>
         <tr>
           <td>
@@ -26,42 +27,42 @@
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])" class="song" id="song3">&nbsp;&nbsp;&nbsp;&nbsp;Urlar</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])" class="part" id="song3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Urlar</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])" class="song" id="song4">&nbsp;&nbsp;&nbsp;&nbsp;Variation</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])" class="part" id="song4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variation</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[5], audioArray[5])" ondblclick="onEnd(songArray[5], audioArray[5])" class="song" id="song5">&nbsp;&nbsp;&nbsp;&nbsp;Variation Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[5], audioArray[5])" ondblclick="onEnd(songArray[5], audioArray[5])" class="part" id="song5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variation Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[6], audioArray[6])" ondblclick="onEnd(songArray[6], audioArray[6])" class="song" id="song6">&nbsp;&nbsp;&nbsp;&nbsp;Taorluath</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[6], audioArray[6])" ondblclick="onEnd(songArray[6], audioArray[6])" class="part" id="song6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taorluath</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[7], audioArray[7])" ondblclick="onEnd(songArray[7], audioArray[7])" class="song" id="song7">&nbsp;&nbsp;&nbsp;&nbsp;Taorluath Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[7], audioArray[7])" ondblclick="onEnd(songArray[7], audioArray[7])" class="part" id="song7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taorluath Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[8], audioArray[8])" ondblclick="onEnd(songArray[8], audioArray[8])" class="song" id="song8">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[8], audioArray[8])" ondblclick="onEnd(songArray[8], audioArray[8])" class="part" id="song8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[9], audioArray[9])" ondblclick="onEnd(songArray[9], audioArray[9])" class="song" id="song9">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[9], audioArray[9])" ondblclick="onEnd(songArray[9], audioArray[9])" class="part" id="song9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[10], audioArray[10])" ondblclick="onEnd(songArray[10], audioArray[10])" class="song" id="song10">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath A Mach</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[10], audioArray[10])" ondblclick="onEnd(songArray[10], audioArray[10])" class="part" id="song10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath A Mach</span>
           </td>
         </tr>
         <tr>
@@ -76,57 +77,57 @@
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[11], audioArray[11])" ondblclick="onEnd(songArray[11], audioArray[11])" class="song" id="song11">&nbsp;&nbsp;&nbsp;&nbsp;Urlar</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[11], audioArray[11])" ondblclick="onEnd(songArray[11], audioArray[11])" class="part" id="song11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Urlar</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[12], audioArray[12])" ondblclick="onEnd(songArray[12], audioArray[12])" class="song" id="song12">&nbsp;&nbsp;&nbsp;&nbsp;Variation 1</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[12], audioArray[12])" ondblclick="onEnd(songArray[12], audioArray[12])" class="part" id="song12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variation 1</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[13], audioArray[13])" ondblclick="onEnd(songArray[13], audioArray[13])" class="song" id="song13">&nbsp;&nbsp;&nbsp;&nbsp;Variation 2</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[13], audioArray[13])" ondblclick="onEnd(songArray[13], audioArray[13])" class="part" id="song13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variation 2</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[14], audioArray[14])" ondblclick="onEnd(songArray[14], audioArray[14])" class="song" id="song14">&nbsp;&nbsp;&nbsp;&nbsp;Variation 3</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[14], audioArray[14])" ondblclick="onEnd(songArray[14], audioArray[14])" class="part" id="song14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variation 3</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[15], audioArray[15])" ondblclick="onEnd(songArray[15], audioArray[15])" class="song" id="song15">&nbsp;&nbsp;&nbsp;&nbsp;Leamluath</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[15], audioArray[15])" ondblclick="onEnd(songArray[15], audioArray[15])" class="part" id="song15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leamluath</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[16], audioArray[16])" ondblclick="onEnd(songArray[16], audioArray[16])" class="song" id="song16">&nbsp;&nbsp;&nbsp;&nbsp;Leamluath Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[16], audioArray[16])" ondblclick="onEnd(songArray[16], audioArray[16])" class="part" id="song16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leamluath Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[17], audioArray[17])" ondblclick="onEnd(songArray[17], audioArray[17])" class="song" id="song17">&nbsp;&nbsp;&nbsp;&nbsp;Taorluath</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[17], audioArray[17])" ondblclick="onEnd(songArray[17], audioArray[17])" class="part" id="song17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taorluath</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[18], audioArray[18])" ondblclick="onEnd(songArray[18], audioArray[18])" class="song" id="song18">&nbsp;&nbsp;&nbsp;&nbsp;Taorluath Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[18], audioArray[18])" ondblclick="onEnd(songArray[18], audioArray[18])" class="part" id="song18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taorluath Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[19], audioArray[19])" ondblclick="onEnd(songArray[19], audioArray[19])" class="song" id="song19">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[19], audioArray[19])" ondblclick="onEnd(songArray[19], audioArray[19])" class="part" id="song19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[20], audioArray[20])" ondblclick="onEnd(songArray[20], audioArray[20])" class="song" id="song20">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath Doubling</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[20], audioArray[20])" ondblclick="onEnd(songArray[20], audioArray[20])" class="part" id="song20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath Doubling</span>
           </td>
         </tr>
         <tr>
           <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[21], audioArray[21])" ondblclick="onEnd(songArray[21], audioArray[21])" class="song" id="song21">&nbsp;&nbsp;&nbsp;&nbsp;Crunluath A Mach</span>
+            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[21], audioArray[21])" ondblclick="onEnd(songArray[21], audioArray[21])" class="part" id="song21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crunluath A Mach</span>
           </td>
         </tr>
       </tbody>
