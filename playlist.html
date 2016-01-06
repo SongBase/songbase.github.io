@@ -17,84 +17,49 @@
   </head>
 
   <body>
-    <table width="450" border="0" cellpadding="4" cellspacing="0">
-      <tbody>
-        <tr>
-          <td>
-            <span class="composer">J S Bach</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[1], audioArray[1])" ondblclick="onEnd(songArray[1], audioArray[1])" class="song" id="song1">Prelude BWV 556</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="composer">J S Bach</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[6], audioArray[6])" ondblclick="onEnd(songArray[6], audioArray[6])" class="song" id="song6">Sheep May Safely Graze</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="composer">W A Mozart</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[2], audioArray[2])" ondblclick="onEnd(songArray[2], audioArray[2])" class="song" id="song2">Recordare</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="composer">A Vivaldi</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])" class="song" id="song3">Gloria</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="composer">G F Handel</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])" class="song" id="song4">Zadok the Priest</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="composer">G F Handel</span>
-          </td>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[5], audioArray[5])" ondblclick="onEnd(songArray[5], audioArray[5])" class="song" id="song5">Arrival of the Queen of Sheba</span>
-          </td>
-        </tr>
-      </tbody>
+    <table width="450" border="0" cellpadding="4" id="playlist">
     </table>
 
-    <audio id="audio1" onended="onEnd(songArray[1], audioArray[1])" src="music/JSBach-Prelude-BWV556-v2R.mp3"></audio>
-    <audio id="audio2" onended="onEnd(songArray[2], audioArray[2])" src="music/Recordare.mp3"></audio>
-    <audio id="audio3" onended="onEnd(songArray[3], audioArray[3])" src="music/Gloria-Vivaldi-v3R.mp3"></audio>
-    <audio id="audio4" onended="onEnd(songArray[4], audioArray[4])" src="music/zadok.mp3"></audio>
-    <audio id="audio5" onended="onEnd(songArray[5], audioArray[5])" src="music/sheba.mp3"></audio>
-    <audio id="audio6" onended="onEnd(songArray[6], audioArray[6])" src="music/SheepMaySafelyGraze.mp3"></audio>
+    <div id="audio">
+    </div>
 
     <script type="text/javascript">
-      var audioArray = new Array();
-      audioArray[0] = null;
-      audioArray[1] = document.getElementById("audio1");
-      audioArray[2] = document.getElementById("audio2");
-      audioArray[3] = document.getElementById("audio3");
-      audioArray[4] = document.getElementById("audio4");
-      audioArray[5] = document.getElementById("audio5");
-      audioArray[6] = document.getElementById("audio6");
+    var text = '{ "songs" : [' +
+    '{ "composer":"J S Bach"   , "song":"Prelude BWV 556"               , "mp3":"JSBach-Prelude-BWV556-v2R.mp3" } ,' +
+    '{ "composer":"J S Bach"   , "song":"Sheep May Safely Graze"        , "mp3":"SheepMaySafelyGraze.mp3"       } ,' +
+    '{ "composer":"W A Mozart" , "song":"Recordare"                     , "mp3":"Recordare.mp3"                 } ,' +
+    '{ "composer":"A Vivaldi"  , "song":"Gloria"                        , "mp3":"Gloria-Vivaldi-v3R.mp3"        } ,' +
+    '{ "composer":"G F Handel" , "song":"Zadok the Priest"              , "mp3":"zadok.mp3"                     } ,' +
+    '{ "composer":"G F Handel" , "song":"Arrival of the Queen of Sheba" , "mp3":"sheba.mp3"                     }  ' +
+    ']}';
 
-      var songArray = new Array();
-      songArray[0] = null;
-      songArray[1] = document.getElementById("song1");
-      songArray[2] = document.getElementById("song2");
-      songArray[3] = document.getElementById("song3");
-      songArray[4] = document.getElementById("song4");
-      songArray[5] = document.getElementById("song5");
-      songArray[6] = document.getElementById("song6");
+    var obj = JSON.parse(text);
+    var table_content = '<tbody>';
+    var audio_content = '';
+
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      table_content += '<tr><td><span class="composer">' + obj.songs[i].composer + '</span></td>';
+      table_content += '<td><span title="Click to play or pause and double-click to rewind." ' +
+                                 'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td></tr>';
+
+      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="music/' + obj.songs[i].mp3 + '"></audio>';
+    }
+
+    table_content += '</tbody>';
+    document.getElementById("playlist").innerHTML = table_content;
+    document.getElementById("audio").innerHTML = audio_content;
+
+    var audioArray = new Array();
+    var songArray = new Array();
+
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      audioArray[i] = document.getElementById("audio" + i);
+      songArray[i] = document.getElementById("song" + i);
+    }
 
       function onEnd(song, audio)
       {
@@ -104,7 +69,7 @@
 
       function playPause(song, audio)
       {
-        for (i = 1; i < songArray.length; i++)
+        for (i = 0; i < songArray.length; i++)
         {
           if (song != songArray[i])
           {
