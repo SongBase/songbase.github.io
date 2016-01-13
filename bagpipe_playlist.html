@@ -17,131 +17,53 @@
   </head>
 
   <body>
-    <table width="450" border="0" cellpadding="4" cellspacing="0">
-      <tbody>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[1], audioArray[1])" ondblclick="onEnd(songArray[1], audioArray[1])" class="song" id="song1">Bonnie Lass of Fyvie</span>
-          </td>
-          <td>
-            <span class="composer">Traditional</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[2], audioArray[2])" ondblclick="onEnd(songArray[2], audioArray[2])" class="song" id="song2">The Sands of Kuwait</span>
-          </td>
-          <td>
-            <span class="composer">Gordon Mackenzie</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[3], audioArray[3])" ondblclick="onEnd(songArray[3], audioArray[3])" class="song" id="song3">On the Road to Passchendaele</span>
-          </td>
-          <td>
-            <span class="composer">Gavin Stoddart</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[4], audioArray[4])" ondblclick="onEnd(songArray[4], audioArray[4])" class="song" id="song4">Rocking the Baby</span>
-          </td>
-          <td>
-            <span class="composer">Traditional</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[5], audioArray[5])" ondblclick="onEnd(songArray[5], audioArray[5])" class="song" id="song5">Pipe Sergeant John Barclay</span>
-          </td>
-          <td>
-            <span class="composer">Ian Duncan</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[6], audioArray[6])" ondblclick="onEnd(songArray[6], audioArray[6])" class="song" id="song6">The Hills of Alva</span>
-          </td>
-          <td>
-            <span class="composer">Tom Muirhead</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[7], audioArray[7])" ondblclick="onEnd(songArray[7], audioArray[7])" class="song" id="song7">Horsbrugh Castle</span>
-          </td>
-          <td>
-            <span class="composer">Ian Hardie</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[8], audioArray[8])" ondblclick="onEnd(songArray[8], audioArray[8])" class="song" id="song8">The Heroes of Vittoria</span>
-          </td>
-          <td>
-            <span class="composer">John MacLellan</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[9], audioArray[9])" ondblclick="onEnd(songArray[9], audioArray[9])" class="song" id="song9">Major A C W May's Welcome</span>
-          </td>
-          <td>
-            <span class="composer">Hamish MacColl</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span title="Click to play or pause and double-click to rewind." onclick="playPause(songArray[10], audioArray[10])" ondblclick="onEnd(songArray[10], audioArray[10])" class="song" id="song10">Major Bobby</span>
-          </td>
-          <td>
-            <span class="composer">Hamish MacColl</span>
-          </td>
-        </tr>
-      </tbody>
+    <table width="450" border="0" cellpadding="4" cellspacing="0" id="playlist">
     </table>
 
-    <audio id="audio1" onended="onEnd(songArray[1], audioArray[1])" src="music/BonnieLassOfFyvie.mp3"></audio>
-    <audio id="audio2" onended="onEnd(songArray[2], audioArray[2])" src="music/TheSandsOfKuwait.mp3"></audio>
-    <audio id="audio3" onended="onEnd(songArray[3], audioArray[3])" src="music/OnTheRoadToPasschendaele.mp3"></audio>
-    <audio id="audio4" onended="onEnd(songArray[4], audioArray[4])" src="music/RockingTheBaby.mp3"></audio>
-    <audio id="audio5" onended="onEnd(songArray[5], audioArray[5])" src="music/PipeSergeantJohnBarclay.mp3"></audio>
-    <audio id="audio6" onended="onEnd(songArray[6], audioArray[6])" src="music/The Hills of Alva-Song.mp3"></audio>
-    <audio id="audio7" onended="onEnd(songArray[7], audioArray[7])" src="music/HorsbrughCastle.mp3"></audio>
-    <audio id="audio8" onended="onEnd(songArray[8], audioArray[8])" src="music/TheHeroesOfVittoria.mp3"></audio>
-    <audio id="audio9" onended="onEnd(songArray[9], audioArray[9])" src="music/MajorACWMaysWelcome.mp3"></audio>
-    <audio id="audio10" onended="onEnd(songArray[10], audioArray[10])" src="music/MajorBobby.mp3"></audio>
-
+    <div id="audio">
+    </div>
 
     <script type="text/javascript">
-      var audioArray = new Array();
-      audioArray[0] = null;
-      audioArray[1] = document.getElementById("audio1");
-      audioArray[2] = document.getElementById("audio2");
-      audioArray[3] = document.getElementById("audio3");
-      audioArray[4] = document.getElementById("audio4");
-      audioArray[5] = document.getElementById("audio5");
-      audioArray[6] = document.getElementById("audio6");
-      audioArray[7] = document.getElementById("audio7");
-      audioArray[8] = document.getElementById("audio8");
-      audioArray[9] = document.getElementById("audio9");
-      audioArray[10] = document.getElementById("audio10");
+    var text = '{ "songs" : [' +
+    '{ "composer":"Traditional"      , "song":"Bonnie Lass of Fyvie"         , "mp3":"BonnieLassOfFyvie.mp3"        } ,' +
+    '{ "composer":"Gordon Mackenzie" , "song":"The Sands of Kuwait"          , "mp3":"TheSandsOfKuwait.mp3"         } ,' +
+    '{ "composer":"Gavin Stoddart"   , "song":"On the Road to Passchendaele" , "mp3":"OnTheRoadToPasschendaele.mp3" } ,' +
+    '{ "composer":"Traditional"      , "song":"Rocking the Baby"             , "mp3":"RockingTheBaby.mp3"           } ,' +
+    '{ "composer":"Ian Duncan"       , "song":"Pipe Sergeant John Barclay"   , "mp3":"PipeSergeantJohnBarclay.mp3"  } ,' +
+    '{ "composer":"Tom Muirhead"     , "song":"The Hills of Alva"            , "mp3":"The Hills of Alva-Song.mp3"   } ,' +
+    '{ "composer":"Ian Hardie"       , "song":"Horsbrugh Castle"             , "mp3":"HorsbrughCastle.mp3"          } ,' +
+    '{ "composer":"John MacLellan"   , "song":"The Heroes of Vittoria"       , "mp3":"TheHeroesOfVittoria.mp3"      } ,' +
+    '{ "composer":"Hamish MacColl"   , "song":"Major A C W May\'s Welcome"   , "mp3":"MajorACWMaysWelcome.mp3"      } ,' +
+    '{ "composer":"Hamish MacColl"   , "song":"Major Bobby"                  , "mp3":"MajorBobby.mp3"               }  ' +
+    ']}';
 
+    var obj = JSON.parse(text);
+    var table_content = '<tbody>';
+    var audio_content = '';
 
-      var songArray = new Array();
-      songArray[0] = null;
-      songArray[1] = document.getElementById("song1");
-      songArray[2] = document.getElementById("song2");
-      songArray[3] = document.getElementById("song3");
-      songArray[4] = document.getElementById("song4");
-      songArray[5] = document.getElementById("song5");
-      songArray[6] = document.getElementById("song6");
-      songArray[7] = document.getElementById("song7");
-      songArray[8] = document.getElementById("song8");
-      songArray[9] = document.getElementById("song9");
-      songArray[10] = document.getElementById("song10");
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      table_content += '<tr><td><span title="Click to play or pause and double-click to rewind." ' +
+                                 'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td>';
+      table_content += '<td><span class="composer">' + obj.songs[i].composer + '</span></td></tr>';
 
+      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="music/' + obj.songs[i].mp3 + '"></audio>';
+    }
+
+    table_content += '</tbody>';
+    document.getElementById("playlist").innerHTML = table_content;
+    document.getElementById("audio").innerHTML = audio_content;
+
+    var audioArray = new Array();
+    var songArray = new Array();
+
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      audioArray[i] = document.getElementById("audio" + i);
+      songArray[i] = document.getElementById("song" + i);
+    }
 
       function onEnd(song, audio)
       {
@@ -151,7 +73,7 @@
 
       function playPause(song, audio)
       {
-        for (i = 1; i < songArray.length; i++)
+        for (i = 0; i < songArray.length; i++)
         {
           if (song != songArray[i])
           {
