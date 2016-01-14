@@ -11,13 +11,14 @@
     <meta property="og:title" content="Bagpipe Play Along">
     <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
     <style type="text/css">
-      span.composer {color: #817F73; font-family: Verdana;}
-      span.song {color: #551A8B; cursor: pointer; font-family: Verdana;}
+      span.composer {color: #817F73; font-family: Verdana; font-size: 16px;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Verdana; font-size: 16px;}
+      span.part {color: #551A8B; cursor: pointer; font-family: Verdana; font-size: 14px;}
     </style>
   </head>
 
   <body>
-    <table width="450" border="0" cellpadding="4" cellspacing="0" id="playlist">
+    <table width="450" border="0" cellpadding="2" cellspacing="0" id="playlist">
     </table>
 
     <div id="audio">
@@ -25,17 +26,25 @@
 
     <script type="text/javascript">
     var text = '{ "songs" : [' +
-    '{ "composer":"Traditional"      , "song":"Bonnie Lass of Fyvie"         , "mp3":"BonnieLassOfFyvie.mp3"        } ,' +
-    '{ "composer":"Gordon Mackenzie" , "song":"The Sands of Kuwait"          , "mp3":"TheSandsOfKuwait.mp3"         } ,' +
-    '{ "composer":"Gavin Stoddart"   , "song":"On the Road to Passchendaele" , "mp3":"OnTheRoadToPasschendaele.mp3" } ,' +
-    '{ "composer":"Traditional"      , "song":"Rocking the Baby"             , "mp3":"RockingTheBaby.mp3"           } ,' +
-    '{ "composer":"Ian Duncan"       , "song":"Pipe Sergeant John Barclay"   , "mp3":"PipeSergeantJohnBarclay.mp3"  } ,' +
-    '{ "composer":"William Ross"     , "song":"Leaving Port Askaig"          , "mp3":"Leaving Port Askaig-Song.mp3" } ,' +
-    '{ "composer":"Tom Muirhead"     , "song":"The Hills of Alva"            , "mp3":"The Hills of Alva-Song.mp3"   } ,' +
-    '{ "composer":"Ian Hardie"       , "song":"Horsbrugh Castle"             , "mp3":"HorsbrughCastle.mp3"          } ,' +
-    '{ "composer":"John MacLellan"   , "song":"The Heroes of Vittoria"       , "mp3":"TheHeroesOfVittoria.mp3"      } ,' +
-    '{ "composer":"Hamish MacColl"   , "song":"Major A C W May\'s Welcome"   , "mp3":"MajorACWMaysWelcome.mp3"      } ,' +
-    '{ "composer":"Hamish MacColl"   , "song":"Major Bobby"                  , "mp3":"MajorBobby.mp3"               }  ' +
+    '{ "record_type":"song" , "composer":"Traditional"      , "song":"Bonnie Lass of Fyvie"         , "mp3":"BonnieLassOfFyvie.mp3"                 } ,' +
+    '{ "record_type":"song" , "composer":"Ian Hardie"       , "song":"Horsbrugh Castle"             , "mp3":"HorsbrughCastle.mp3"                   } ,' +
+    '{ "record_type":"song" , "composer":"William Ross"     , "song":"Leaving Port Askaig"          , "mp3":"Leaving Port Askaig-Song.mp3"          } ,' +
+    '{ "record_type":"part" , "composer":"William Ross"     , "song":"Part 1"                       , "mp3":"Leaving Port Askaig-Part 1.mp3"        } ,' +
+    '{ "record_type":"part" , "composer":"William Ross"     , "song":"Part 2"                       , "mp3":"Leaving Port Askaig-Part 2.mp3"        } ,' +
+    '{ "record_type":"part" , "composer":"William Ross"     , "song":"Part 3"                       , "mp3":"Leaving Port Askaig-Part 3.mp3"        } ,' +
+    '{ "record_type":"part" , "composer":"William Ross"     , "song":"Part 4"                       , "mp3":"Leaving Port Askaig-Part 4.mp3"        } ,' +
+    '{ "record_type":"song" , "composer":"Hamish MacColl"   , "song":"Major A C W May\'s Welcome"   , "mp3":"MajorACWMaysWelcome.mp3"               } ,' +
+    '{ "record_type":"song" , "composer":"Hamish MacColl"   , "song":"Major Bobby"                  , "mp3":"MajorBobby.mp3"                        } ,' +
+    '{ "record_type":"song" , "composer":"Gavin Stoddart"   , "song":"On the Road to Passchendaele" , "mp3":"OnTheRoadToPasschendaele.mp3"          } ,' +
+    '{ "record_type":"song" , "composer":"Ian Duncan"       , "song":"Pipe Sergeant John Barclay"   , "mp3":"PipeSergeantJohnBarclay.mp3"           } ,' +
+    '{ "record_type":"part" , "composer":"Ian Duncan"       , "song":"Part 1"                       , "mp3":"Pipe Sergeant John Barclay-Part 1.mp3" } ,' +
+    '{ "record_type":"part" , "composer":"Ian Duncan"       , "song":"Part 2"                       , "mp3":"Pipe Sergeant John Barclay-Part 2.mp3" } ,' +
+    '{ "record_type":"part" , "composer":"Ian Duncan"       , "song":"Part 3"                       , "mp3":"Pipe Sergeant John Barclay-Part 3.mp3" } ,' +
+    '{ "record_type":"part" , "composer":"Ian Duncan"       , "song":"Part 4"                       , "mp3":"Pipe Sergeant John Barclay-Part 4.mp3" } ,' +
+    '{ "record_type":"song" , "composer":"Traditional"      , "song":"Rocking the Baby"             , "mp3":"RockingTheBaby.mp3"                    } ,' +
+    '{ "record_type":"song" , "composer":"John MacLellan"   , "song":"The Heroes of Vittoria"       , "mp3":"TheHeroesOfVittoria.mp3"               } ,' +
+    '{ "record_type":"song" , "composer":"Tom Muirhead"     , "song":"The Hills of Alva"            , "mp3":"The Hills of Alva-Song.mp3"            } ,' +
+    '{ "record_type":"song" , "composer":"Gordon Mackenzie" , "song":"The Sands of Kuwait"          , "mp3":"TheSandsOfKuwait.mp3"                  }  ' +
     ']}';
 
     var obj = JSON.parse(text);
@@ -44,13 +53,26 @@
 
     for (i = 0; i < obj.songs.length; i++)
     {
-      table_content += '<tr><td><span title="Click to play or pause and double-click to rewind." ' +
-                                 'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
-                                 'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
-                                 'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td>';
-      table_content += '<td><span class="composer">' + obj.songs[i].composer + '</span></td></tr>';
-
-      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="music/' + obj.songs[i].mp3 + '"></audio>';
+       if (obj.songs[i].record_type == "song")
+       {
+         if (i > 0)
+         {
+           table_content += '<tr><td> </td></tr>';
+         }
+         table_content += '<tr><td><span title="Click to play or pause and double-click to rewind." ' +
+                                   'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                   'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                   'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td>';
+         table_content += '<td><span class="composer">' + obj.songs[i].composer + '</span></td></tr>';
+       }
+       else
+       {
+         table_content += '<tr><td><span title="Click to play or pause and double-click to rewind." ' +
+                                   'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                   'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                   'class="part" id="song' + i + '">&nbsp;&nbsp;&nbsp;&nbsp;' + obj.songs[i].song + '</span></td></tr>';
+       }
+       audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="music/' + obj.songs[i].mp3 + '"></audio>';
     }
 
     table_content += '</tbody>';
