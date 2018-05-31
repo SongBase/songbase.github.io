@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title lang="en-gb">Audovia</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <meta content="Donald G Gray" name="author">
+    <meta content="Linux application for making music using JFugue MusicStrings" name="description">
+    <meta property="og:image" content="http://audovia.com/image/screenshot.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Audovia">
+    <meta property="og:description" content="Linux application for making music using JFugue MusicStrings">
+    <style type="text/css">
+      body {background-color: #ffffff;}
+      h1 {color: #551A8B; font-family: Ubuntu; font-size: 40px; font-weight: normal; text-align: center;}
+      h2 {color: #551A8B; font-family: Ubuntu; font-size: 18px; font-weight: normal; text-align: center;}
+      hr {color: #ffffff;}
+      a:link {color: #551A8B;}
+      a:visited {color: #551A8B;}
+      a:active {color: #EE0000;}
+      a.nounderline {text-decoration:none; font-weight:bold;}
+      span.terminal {color: #555555; font-family: Cutive Mono; font-size: 15px;}
+      span.footer {color: #555555; font-family: Open Sans; font-size: 14px; line-height: 1.3;}
+      span.text-black {color: #000000; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      span.text {color: #555555; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      span.caption {color: #551A8B;  font-family: Open Sans; font-size: 16px;}
+      li:not(:last-child) {margin-bottom: 8px;}
+      p {margin-top: 0px; margin-bottom: 12px;}
+    </style>
+  </head>
+  <body style="margin: 0;">
+
+<!--<div style="position: absolute; top: 0px; width: 100%; height: 140px; background: linear-gradient(#8000ff,#ffffff);">-->
+<div style="position: absolute; top: 0px; width: 100%; height: 140px;"> <!-- background: linear-gradient(#8000ff,#ffffff);">-->
+
+   <h1><strong>Audovia</strong></h1>
+    <!-- <h2><em>database application for making music using JFugue MusicStrings</em></h2> -->
+    <div style="position: relative; top: -14px;">
+    <h2><em>Linux application for making music using JFugue MusicStrings</em></h2>
+    </div>
+
+    <div style="position: absolute; left: 50%; margin-left: -486px; top: 36px;">
+             <!-- <a href="https://uappexplorer.com/app/audovia.songbuilder" target="_blank"> <img title="Audovia on uApp Explorer"
+                alt="Audovia Icon" src="image/SongBuilderColourIcon74.png"
+                style="border: 0px solid;"></a> -->
+                <img title="Audovia Icon"
+				                alt="Audovia Icon" src="image/SongBuilderColourIcon74.png"
+                style="border: 0px solid;">
+    </div>
+
+ </div>
+
+    <!-- Place this code where you want the badge to render. -->
+	<!--<a href="https://plus.google.com/communities/115182680696167827789?prsrc=3" rel="publisher" target="_blank" style="text-decoration:none;">
+	<img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
+    </a>-->
+
+    <div style="position: absolute; left: 50%; margin-left: -494px; top: 160px;">
+
+      <iframe style="border-style: none;" src="playlist.html" height="330" width="420"></iframe>
+
+      <!--<iframe src="https://player.vimeo.com/video/149954239?title=0&byline=0&portrait=0" width="400" height="308" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+
+    </div>
+
+    <!--<div style="width: 400px; position: absolute; left: 50%; margin-left: -486px; top: 460px;">-->
+
+    <div style="background-color: #f4f4f4; width: 382px; position: absolute; left: 50%; margin-left: -486px; top: 504px; padding: 10px;">
+
+      <span class="text"><p>To install <b>Audovia</b> on a Linux <a class="nounderline" href="https://snapcraft.io/docs/core/install" target="_blank" rel="noopener noreferrer">snapd</a> enabled system:</p></span>
+      <span class="text"><p>&nbsp;&nbsp;&nbsp;&nbsp; sudo snap install audovia</p></span>
+      <span class="text"><p>Desktop shortcut:</p></span>
+      <span class="text"><p>&nbsp;&nbsp;&nbsp;&nbsp; /snap/audovia/current/Audovia</p></span>
+
+      <span class="text"><p>On Microsoft Windows or Apple Macintosh, you can use Oracle's <a class="nounderline" href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">VirtualBox</a> to run a suitable Linux system
+      such as <a class="nounderline" href="https://www.ubuntu.com/desktop" target="_blank" rel="noopener noreferrer">Ubuntu</a> (64&#8209;bit) in a virtual machine.</p></span>
+      <!--<hr><span class="text"><p style="margin-bottom: 8px; margin-top: 12px;">On Microsoft Windows, first install
+      <a class="nounderline" href="http://java.com/" target="_blank" rel="noopener noreferrer">Java</a>,
+      then download Audovia from <a class="nounderline" href="https://bintray.com/songbuilder/generic/download_file?file_path=installAudovia-3-3.msi" rel="noopener noreferrer">here</a>.
+      </span>-->
+      <!--
+      <span class="text"><p style="margin-bottom: 4px;"><b>Audovia</b> is an open source application and can be found on <a class="nounderline" href="https://github.com/SongBase/Audovia" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></span>
+      -->
+    <!--</div>
+
+
+    <div style="background-color: #f4f4f4; width: 382px; position: absolute; left: 50%; margin-left: -486px; top: 756px; padding: 10px;">-->
+
+      <span class="text"><p>The <b>Audovia Interface</b> directory can be used to share
+        MIDI, MusicXML and WAV output files with other snappy applications.
+        </p>
+        <p>
+        This directory can be synced by running the desktop shortcut:</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; /snap/audovia/current/Audosync</p>
+      <p>
+        We recommend copying this to:
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; ~/.local/share/applications/
+      </p>
+      <p style="margin-bottom: 4px;">
+        This hidden directory can be accessed by pressing ctrl+H.
+      </p>
+      </span>
+
+    </div>
+
+    <!--<div style="width: 400px; position: absolute; left: 50%; margin-left: -486px; top: 756px;">
+    <a href="image/SongsFS.png" rel="noopener noreferrer">
+      <img title="Songs"
+	                  alt="Songs" src="image/Songs.png"
+                style="border: 0px solid;" align="left">
+    </a>
+    </div>-->
+
+    <div style="width: 550px; background-color: #ffffff;  margin-left: -68px; position: absolute; top: 156px; left: 50%;  border: 8px solid white;">
+      <span class="text">
+	  <p>
+	  These songs were produced using <b>Audovia</b>, a Linux application which can make music with up to fifteen instrumental voices and a percussion track.</p><p>Instruments can be chosen from the default soundbank of 128&nbsp;instruments or
+	  from any other soundbank of your choice.
+	  </p>
+	  <p>
+	  <b>Audovia</b> is great for making background music for videos or backing tracks for playing or singing along to.&nbsp; Even ringtones for your mobile phone.
+	  </p>
+	  <p>
+	  Songs can be developed, tested and edited very quickly and easily by virtue of the database structure and the JFugue MusicString notation.
+	  </p>
+	  <p>
+	        Notes are specified by their name and octave or by their MIDI value and they may be entered manually or by picking from graphic Treble, Alto, Tenor and Bass staves within the MusicString editor<!--as shown in this <a class="nounderline" href="https://vimeo.com/132335980" target="_blank" rel="noopener noreferrer">Demonstration</a>-->.&nbsp;
+	        Durations are expressed as numerical values or by character codes.
+	  </p>
+	  <p>
+	        You can use notes from C0 to G10, corresponding to MIDI values 0 to 127.&nbsp Middle C is C5.&nbsp The opening phrase of Joy to the World can be written as:
+	  </p>
+	  <p>
+	        &nbsp;&nbsp;&nbsp;&nbsp; C6q&nbsp; B5i.&nbsp; A5s&nbsp; G5q.&nbsp; F5i&nbsp; E5q&nbsp; D5q&nbsp; C5q.
+	  </p>
+	  <p>
+	        Songs can be exported to MIDI, MusicXML and WAV.
+	  </p>
+	  <p style="margin-bottom: 30px;">
+	        The MIDI files can be opened in <a class="nounderline" href="https://lmms.io/" target="_blank" rel="noopener noreferrer">LMMS</a>
+	        for music processing.&nbsp;
+	        The WAV files can be opened in <a class="nounderline" href="http://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a>,
+	        then exported to MP3 and
+	        the MusicXML files can be opened in <a class="nounderline" href="https://musescore.org/" target="_blank" rel="noopener noreferrer">MuseScore</a>
+	        for music publishing.
+	  </p>
+	  <p>
+	        <span class="text-black"><em>Additional Features:</em></span>
+	        <ul style="margin-bottom: 24px;">
+	          <li>Song backup and restore via XML;</li>
+	          <li>JFugue extension for string constants;</li>
+	          <li>Shared database support for MySQL;</li>
+	          <li>Comprehensive <a class="nounderline" href="doc/AudoviaDocumentation-3-6.pdf" target="_blank" rel="noopener noreferrer">Documentation</a>.</li>
+	        </ul>
+	  </p>
+	  <p>
+	        <span class="text-black"><em>Quick start:</em></span>
+	        <ol>
+	          <li style="font-weight: bold;"><span style="font-weight: normal;">File/Song Import/open Demo folder, select a song and import;</span></li>
+	          <li style="font-weight: bold;"><span style="font-weight: normal;">Tree View/select "Song", press Play, then Default Soundbank.</span></li>
+	        </ol>
+	  </p>
+	  <p>
+	  The quality of your music will depend on your choice of instrument for each voice and your choice of soundbank.&nbsp; One good soundbank is available <a class="nounderline" href="https://drive.google.com/folderview?id=0B8XyJFPN233fbmY3WFhMT3djc1E&usp=sharing"
+      target="_blank" rel="noopener noreferrer">here</a> and there are more at <a class="nounderline" href="https://sites.google.com/site/soundfonts4u/"
+      target="_blank" rel="noopener noreferrer">Soundfonts4U</a>.
+	  </p>
+	 <!-- <p>
+	        <em>Support:</em>
+	        <blockquote style="margin-left: 22px; margin-top: -5px;">
+	          <a class="nounderline" href="mailto:info@audovia.com" rel="noopener noreferrer">info@audovia.com</a>
+	        </blockquote>
+	  </p> -->
+      </span>
+    </div>
+
+   <!-- <div style="width: 968px; background-color: #ffffff;  margin-left: -486px; position: absolute; top: 788px; left: 50%;">
+      <span class="text">
+	  <p>
+	  The quality of your music will depend on your choice of instrument for each voice and your choice of soundbank.&nbsp; One good soundbank is available <a class="nounderline" href="https://drive.google.com/folderview?id=0B8XyJFPN233fbmY3WFhMT3djc1E&usp=sharing"
+      target="_blank" rel="noopener noreferrer">here</a> and there are more at <a class="nounderline" href="https://sites.google.com/site/soundfonts4u/"
+      target="_blank" rel="noopener noreferrer">Soundfonts4U</a>.
+	  </p>
+	  </span>
+	</div> -->
+
+    <!-- changed encoding to UTF-8 -->
+    <div align="center" style="width: 968px; margin: auto; position: absolute; top: 1025px; left: 0px; right: 0px;">
+
+    <!--<span class="footer"><em><p style="margin-bottom: 6px;"><b>Audovia</b> is open-source software and can be found on <a class="nounderline" href="https://github.com/SongBase/Audovia" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></em></span>-->
+
+      <span class="footer">
+      <em><!--Do you play the Great Highland Bagpipe?&nbsp; If so, please visit <a class="nounderline" href="http://pipetunes.uk/" target="_blank" rel="noopener noreferrer">pipetunes.uk</a>.<br><br>-->
+          Copyright &copy; 2017&nbsp;&nbsp; Donald G Gray</em><br><br>&nbsp;
+      </span>
+
+   <!-- <div align="left">
+    <span class="caption"><em>Blog</em></span>
+    <span class="text">
+    <p>
+    </p>
+
+    <p>
+    Do you play the Great Highland Bagpipe?&nbsp; If so, please visit
+    <a class="nounderline" href="http://pipetunes.uk/" target="_blank" rel="noopener noreferrer">pipetunes.uk</a>.
+    </p>
+    <p>
+    There is a Song Builder community at
+    <a class="nounderline" href="https://plus.google.com/communities/115182680696167827789" target="_blank" rel="noopener noreferrer">Google+</a>.
+    </p>
+
+    <p>
+    &nbsp;
+    </p>
+    </span>
+    </div> -->
+
+    <!-- <div align="left">
+    <span class="caption"><em>Open Discussion</em></span>
+    </div>
+
+      <div id="disqus_thread" align="center" style="width: 600px;"></div>
+	  <script>
+
+	  /**
+	  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+	  var disqus_config = function () {
+	  this.page.url = 'http://audovia.com/';  // Replace PAGE_URL with your page's canonical URL variable
+	  this.page.identifier = 'audovia'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	  };
+
+	  (function() { // DON'T EDIT BELOW THIS LINE
+	  var d = document, s = d.createElement('script');
+	  s.src = '//audovia.disqus.com/embed.js';
+	  s.setAttribute('data-timestamp', +new Date());
+	  (d.head || d.body).appendChild(s);
+	  })();
+	  </script>
+	  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div> -->
+
+    </div>
+  </body>
+</html>
