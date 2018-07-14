@@ -21,6 +21,9 @@
   </head>
 
   <body>
+
+  <div style="border-style: none; width: 420px; height: 250px; overflow: auto;">
+
     <div id="playlist">
     </div>
 
@@ -42,7 +45,7 @@
     ']}';
 
     var obj = JSON.parse(text);
-    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="402" cellpadding="3"><tbody>';
+    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="400" cellpadding="3"><tbody>';
     var audio_content = '';
 
     for (i = 0; i < obj.songs.length; i++)
@@ -101,5 +104,8 @@
         }
       }
     </script>
+
+    </div>
+
   </body>
 </html>
