@@ -15,14 +15,14 @@
     <meta property="og:title" content="Playlist">
     <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
     <style type="text/css">
-      span.composer {color: #817F73; font-family: Open Sans; font-size: 16px; line-height: 1.3;}
-      span.song {color: #551A8B; cursor: pointer; font-family: Open Sans; font-size: 16px; line-height: 1.3;}
+      span.composer {color: #817F73; font-family: Open Sans; font-size: 16px;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Open Sans; font-size: 16px;}
     </style>
   </head>
 
   <body>
 
-  <div style="border-style: none; width: 420px; height: 250px; overflow: auto;">
+  <div style="border-style: none; width: 420px; height: 245px; overflow: auto;">
 
     <div id="playlist">
     </div>
@@ -45,7 +45,7 @@
     ']}';
 
     var obj = JSON.parse(text);
-    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="400" cellpadding="3"><tbody>';
+    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="400" cellpadding="2"><tbody>';
     var audio_content = '';
 
     for (i = 0; i < obj.songs.length; i++)
