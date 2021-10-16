@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QVVZPSL4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2QVVZPSL4S');
+</script>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title lang="en-gb">Audovia Music</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <meta content="Donald G Gray" name="author">
+    <meta content="Music Making application for Classical Musicians" name="description">
+    <meta property="og:image" content="https://songbase.github.io/image/2018-03-25.png">
+    <meta property="og:image:width" content="686">
+    <meta property="og:image:height" content="385">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Audovia Music">
+    <meta property="og:description" content="Music Making application for Classical Musicians">
+    <meta property="og:url" content="https://songbase.github.io/">
+
+    <style type="text/css">
+      body {background-color: #ffffff;}
+      h1 {color: #551A8B; font-family: Ubuntu; font-size: 40px; font-weight: normal; text-align: center;}
+      h2 {color: #551A8B; font-family: Ubuntu; font-size: 18px; font-weight: normal; text-align: center;}
+      a:link {color: #551A8B;}
+      a:visited {color: #551A8B;}
+      a:active {color: #EE0000;}
+      a.nounderline {text-decoration:none; font-weight:bold;}
+      span.terminal {color: #555555; font-family: Cutive Mono; font-size: 15px;}
+      span.footer {color: #555555; font-family: Open Sans; font-size: 14px; line-height: 1.3;}
+      span.text-black {color: #000000; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      span.text {color: #555555; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      span.text-white {color: #ffffff; font-family: Open Sans; font-size: 15px; line-height: 1.3;}
+      span.caption {color: #551A8B;  font-family: Open Sans; font-size: 16px;}
+      li:not(:last-child) {margin-bottom: 8px;}
+      p {margin-top: 0px; margin-bottom: 12px;}
+    </style>
+  </head>
+  <body style="margin: 0;">
+
+<div style="position: absolute; top: 0px; width: 100%; height: 140px;">
+
+<!--   <h1><strong>Audovia Music</strong></h1>
+    <div style="position: relative; top: -14px;">
+    <h2><em>Making Music for Classical Musicians</em></h2>
+    </div>
+
+   <div style="position: absolute; left: 50%; margin-left: -486px; top: 36px;">
+                <a href="https://snapcraft.io/audovia-classic" target="_blank" rel="noopener noreferrer">
+                <img title="Audovia Icon"
+				                alt="Audovia Icon" src="image/SongBuilderColourIcon74.png"
+                style="border: 0px solid;">
+                </a>
+    </div>  -->
+
+    <!--<div style="position: absolute; left: 50%; margin-left: 414px; top: 36px;">
+                <a href="https://github.com/SongBase/Audovia" target="_blank" rel="noopener noreferrer">
+                <img title="GitHub mark"
+				                alt="GitHub mark" src="image/GitHub-Mark-32px.png"
+                style="border: 0px solid;">
+                </a>
+    </div>
+
+    <div style="position: absolute; left: 50%; margin-left: 454px; top: 36px;">
+	<a href="https://plus.google.com/communities/115182680696167827789" target="_blank" rel="noopener noreferrer">
+	<img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
+    </a>
+    </div>-->
+
+ </div>
+
+    <!--<div align="center" style="background: linear-gradient(to right, #cb5fc7, white, white, #cb5fc7); width: 972px; position: relative; left: 50%; margin-left: -486px; top: 130px;">
+    <span class="text"> <hr style="height:1px;border-width:0;color:grey;background-color:grey">
+    <a href="index.html" style="text-decoration:none;"><b>Home</b></a>&nbsp;&nbsp;&nbsp;
+    <a href="demo.html" style="text-decoration:none;">Demo</a>&nbsp;&nbsp;&nbsp;
+    <a href="tutorial.html" style="text-decoration:none;">Tutorial</a>-->
+    <!--&nbsp;&nbsp;&nbsp;
+    <a href="mailto:info@audovia.com" style="text-decoration:none;">Contact Us</a>-->
+    <!--<hr style="height:1px;border-width:0;color:grey;background-color:grey">
+    </span>
+    </div>-->
+
+
+<!--<div style="position: absolute; left: 50%; margin-left: -486px; top: 206px;">
+<img src="http://londonmozartplayers.com/wp-content/uploads/2016/08/Orchestra-1-2-1500x430.jpg" alt="London Mozart Players" height="278" width="972">
+</div>
+
+<div style="position: absolute; left: 50%; margin-left: 270px; top: 460px;">
+<a href="http://londonmozartplayers.com/" target="_blank" rel="noopener noreferrer">
+<img src="image/LMP.png" alt="London Mozart Players" height="18" width="200">
+</a>
+</div>-->
+
+<div style="position: absolute; left: 50%; margin-left: -486px; top: 0px;">
+<img src="image/sm_Sydney_Opera_banner_scaled.png" alt="Sydney Opera House" height="324" width="972">
+</div>
+
+
+
+
+    <div style="position: absolute; left: 50%; margin-left: -494px; top: 352px;">
+
+      <iframe style="border-style: none;" src="playlist.html" height="340" width="440"></iframe>
+
+    </div>
+
+
+
+
+    <!--<div style="background-color: #f4f4f4; width: 382px; position: absolute; left: 50%; margin-left: -486px; top: 574px; padding: 10px;">
+
+      <span class="text"><p>To install <b>Audovia</b> on a Linux <a class="nounderline" href="https://snapcraft.io/docs/core/install" target="_blank" rel="noopener noreferrer">snapd</a> enabled system:</p></span>
+      <span class="text"><p>&nbsp;&nbsp;&nbsp;&nbsp; sudo snap install audovia</p></span>
+      <span class="text"><p>Desktop shortcut:</p></span>
+      <span class="text"><p>&nbsp;&nbsp;&nbsp;&nbsp; /snap/audovia/current/Audovia</p></span>
+
+      <span class="text"><p>On Microsoft Windows or Apple Macintosh, you can use Oracle's <a class="nounderline" href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">VirtualBox</a> to run a suitable Linux system
+      such as <a class="nounderline" href="https://www.ubuntu.com/desktop" target="_blank" rel="noopener noreferrer">Ubuntu</a> (64&#8209;bit) in a virtual machine.</p></span>
+
+      <span class="text"><p>The <b>Audovia Interface</b> directory can be used to share
+        MIDI, MusicXML and WAV output files with other snappy applications.
+        </p>
+        <p>
+        This directory can be synced by running the desktop shortcut:</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; /snap/audovia/current/Audosync</p>
+      <p>
+        We recommend copying this to:
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; ~/.local/share/applications/
+      </p>
+      <p style="margin-bottom: 4px;">
+        This hidden directory can be accessed by pressing ctrl+H.
+      </p>
+      </span>
+
+    </div>-->
+
+    <div style="width: 530px; background-color: #ffffff;  margin-left: -48px; position: absolute; top: 348px; left: 50%;  border: 8px solid white;">
+      <span class="text">
+	<!--  <p style="margin-top: 0px; margin-bottom: 16px;"> -->
+	<p>
+	  <b>Audovia</b> is a music making application for classical musicians.&nbsp; Up to fifteen instrumental voices and a percussion track can be used.
+	  <!--&nbsp;
+	  See <a class="nounderline" href="https://songbase.github.io/doc/AudoviaDocumentation-4-0.pdf"
+	         target="_blank" rel="noopener noreferrer">Documentation</a>.-->
+	  </p>
+	  <p style="margin-left: -20px; margin-bottom: 20px;">
+	  &larr; click on one of the samples to play or pause and double-click to rewind.
+	  </p>
+<!--	  <p>&nbsp;
+	  </p> -->
+          <!-- PayPal button -->
+	  	  <div style="position: absolute; left: 50%; margin-left: 130px; top: -325px;">
+	  	  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	  	  <input type="hidden" name="cmd" value="_s-xclick" />
+	  	  <input type="hidden" name="hosted_button_id" value="GVABA73MP8PCA" />
+	  	  <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	  	  <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+	  	  </form>
+	  	  </div>
+
+
+	  	  <!--<div align="left" style="position: absolute; left: 50%; margin-left: -12px; top: -292px;">
+	  	  <span class="text-white">
+	  	  <p><em>
+	  	  Please donate to help cover costs.
+	  	  </em></p>
+	  	  </span>
+          </div>-->
+
+	  <div align="center">
+	  <p style="margin-top: 6px; margin-bottom: 18px;">
+
+	  <a href="https://snapcraft.io/audovia-classic"
+	          style="text-decoration:none;" target="_blank" rel="noopener noreferrer">
+	       <button type="button" style="background-color:#e0e0e0; width:240px; padding:5px; cursor:pointer; color:#551A8B; margin-top: -6px;">
+	               <font style="font-family: Open Sans; font-size: 15px;"><b>Install Audovia on Linux</b>
+	               </font>
+	       </button>
+      </a>
+
+
+
+
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://github.com/SongBase/Audovia/releases/download/v4.01/Audovia-4-0-1.msi"
+	          style="text-decoration:none;" target="_blank" rel="noopener noreferrer">
+	       <button type="button" style="background-color:#e0e0e0; width:240px; padding:5px; cursor:pointer; color:#551A8B;">
+	               <font style="font-family: Open Sans; font-size: 15px;"><b>Install Audovia on Windows</b>
+	               </font>
+	       </button>
+      </a>
+
+
+
+	  </p>
+	  </div>
+
+
+
+
+	 <!-- <p>&nbsp;
+	  </p> -->
+	  <!--<p>
+	  Instruments can be chosen from the default soundbank of 128&nbsp;instruments or
+	  from any other soundbank of your choice.
+	  </p>-->
+	 <!-- <p style="margin-top: 0px; margin-bottom: 20px;"> -->
+	 <p style="clear: both;">
+	  <b>Audovia</b> is great for making background music for videos or backing tracks for playing or singing along to.&nbsp;
+	  Even <a class="nounderline" href="https://drive.google.com/drive/folders/1A1MdhX_gnX7xYDk90ybHfZzugBut22m4?usp=sharing" target="_blank" rel="noopener noreferrer">ringtones</a> for your mobile phone.
+	  </p>
+	  <!--<p>
+	  Songs can be developed, tested and edited very quickly and easily by virtue of the database structure and the JFugue MusicString notation.
+	  </p>
+	  <p>
+	        Notes are specified by their name and octave or by their MIDI value and they may be entered manually or by picking from graphic Treble, Alto, Tenor and Bass staves within the MusicString editor--><!--as shown in this <a class="nounderline" href="https://vimeo.com/132335980" target="_blank" rel="noopener noreferrer">Demonstration</a>--><!--.&nbsp;
+	        Durations are expressed as numerical values or by character codes.
+	  </p>
+	  <p>
+	        You can use notes from C0 to G10, corresponding to MIDI values 0 to 127.&nbsp Middle C is C5.&nbsp The opening phrase of Joy to the World can be written as:
+	  </p>
+	  <p>
+	        &nbsp;&nbsp;&nbsp;&nbsp; C6q&nbsp; B5i.&nbsp; A5s&nbsp; G5q.&nbsp; F5i&nbsp; E5q&nbsp; D5q&nbsp; C5q.
+	  </p>
+	  <p>
+	        Songs can be exported to MIDI, MusicXML and WAV.
+	  </p>
+	  <p style="margin-bottom: 30px;">
+	        The MIDI files can be opened in <a class="nounderline" href="https://lmms.io/" target="_blank" rel="noopener noreferrer">LMMS</a>
+	        for music processing.&nbsp;
+	        The WAV files can be opened in <a class="nounderline" href="http://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a>,
+	        then exported to MP3 and
+	        the MusicXML files can be opened in <a class="nounderline" href="https://musescore.org/" target="_blank" rel="noopener noreferrer">MuseScore</a>
+	        for music publishing.
+	  </p>
+	  <p>
+	        <span class="text-black"><em>Additional Features:</em></span>
+	        <ul style="margin-bottom: 24px;">
+	          <li>Song backup and restore via XML;</li>
+	          <li>JFugue extension for string constants;</li>
+	          <li>Shared database support for MySQL;</li>
+	          <li>Comprehensive <a class="nounderline" href="doc/AudoviaDocumentation-3-7.pdf" target="_blank" rel="noopener noreferrer">Documentation</a>.</li>
+	        </ul>
+	  </p>
+	  <p>
+	        <span class="text-black"><em>Quick start:</em></span>
+	        <ol>
+	          <li style="font-weight: bold;"><span style="font-weight: normal;">File/Song Import/open Demo folder, select a song and import;</span></li>
+	          <li style="font-weight: bold;"><span style="font-weight: normal;">Tree View/select "Song", press Play, then Default Soundbank.</span></li>
+	        </ol>
+	  </p>
+	  <p>
+	  -->
+	  The quality of your music will depend on your choice of instrument for each voice and your choice of soundbank.<!--&nbsp; One good soundbank is available <a class="nounderline" href="https://drive.google.com/folderview?id=0B8XyJFPN233fbmY3WFhMT3djc1E&usp=sharing"
+      target="_blank" rel="noopener noreferrer">here</a> and there are more at <a class="nounderline" href="https://sites.google.com/site/soundfonts4u/"
+      target="_blank" rel="noopener noreferrer">Soundfonts 4U</a>.-->
+	  </p>
+
+	  <!--<p>
+	  If you are using Windows Sandbox to test <b>Audovia</b> you will need to install the Liberation fonts manually.&nbsp;
+	  These can be found in:
+	  </p>
+
+	  <p style="text-indent:25px;">
+	  C:\Program&nbsp;Files\Donald&nbsp;G&nbsp;Gray\Audovia\fonts\
+	  </p>-->
+
+
+	  <div align="center">
+	      <p style="margin-top: 32px; margin-bottom: 18px;">
+	      <span class="text"> <hr style="height:1px;border-width:0;color:grey;background-color:grey">
+	      <a href="https://www.facebook.com/audovia" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><b>Facebook Page</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      <a href="https://www.youtube.com/channel/UCzEo99Tp8H87jUdYh9acs5Q" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><b>YouTube Channel</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--	      <a href="https://www.facebook.com/groups/pipetunes" style="text-decoration:none;" target="_blank" rel="noopener noreferrer">Audovia Documentation</a>&nbsp;&nbsp;&nbsp; -->
+	      <a href="https://songbase.github.io/doc/AudoviaDocumentation-4-0.pdf" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><b>Audovia Documentation</b></a>
+	      <hr style="height:1px;border-width:0;color:grey;background-color:grey">
+          </span>
+          </p>
+<!--	  <p style="margin-top: 20px; margin-bottom: 18px;">
+
+	  <a href="https://songbase.github.io/doc/AudoviaDocumentation-4-0.pdf"
+	          style="text-decoration:none;" target="_blank" rel="noopener noreferrer">
+	       <button type="button" style="background-color:#e0e0e0; width:240px; padding:5px; cursor:pointer; color:#551A8B;">
+	               <font style="font-family: Open Sans; font-size: 15px;"><b>Audovia Documentation</b>
+	               </font>
+	       </button>
+      </a>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="https://github.com/SongBase/Audovia/discussions"
+	          style="text-decoration:none;" target="_blank" rel="noopener noreferrer">
+	       <button type="button" style="background-color:#e0e0e0; width:240px; padding:5px; cursor:pointer; color:#551A8B;">
+	               <font style="font-family: Open Sans; font-size: 15px;"><b>Audovia Discussion Group</b>
+	               </font>
+	       </button>
+      </a>
+
+	  </p> -->
+	  </div>
+
+      </span>
+    </div>
+
+<!--<div align="center" style="width: 968px; margin: auto; position: absolute; top: 655px; left: 0px; right: 0px;">-->
+<div style="width: 968px; margin: auto; position: absolute; top: 705px; left: 0px; right: 0px;">
+<video width="686" height="514" controls style="float: left; margin-right: 25px;">
+  <source src="media/QuickStart.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+<span class="text">
+<p>
+<!--<br>-->
+The video shows a song being imported from an archive file.
+</p>
+<p>
+The structure of the song is displayed as a tree view before it is played back using the default soundbank.
+</p>
+<p>
+The notes are specified by their name and octave, and their durations are specified either by a character code or by a numeric value.
+</p>
+<p>
+Notes can be entered manually or by picking from graphic Treble, Alto, Tenor and Bass staves within the MusicString editor.
+</p>
+<p>
+You can export songs to MIDI and WAV files for input to music processing and music publishing applications.
+</p>
+<p>
+The songs here were produced by opening the WAV files in <a class="nounderline" href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a> and then exporting to MP3.
+</p>
+</span>
+</div>
+
+    <div align="center" style="width: 968px; margin: auto; position: absolute; top: 1255px; left: 0px; right: 0px;">
+
+      <span class="footer">
+      <em>
+                <!--We do not collect personal information on this website.&nbsp;
+	            Where we provide links to websites of other organisations, this privacy notice does not cover how that organisation processes personal information.&nbsp;
+	            We encourage you to read the privacy notices on the other websites you visit.-->
+	            <br><!--<br>
+	            All donations go towards the development, maintenance and distribution of Audovia.<br>-->
+          <br>
+          Copyright &copy; 2017 - 2021&nbsp;&nbsp; <a class="nounderline" href="https://songbase.github.io/mywebsite/" target="_blank" rel="noopener noreferrer">Donald G Gray</a></em><br><br>&nbsp;
+      </span>
+
+    </div>
+  </body>
+</html>
