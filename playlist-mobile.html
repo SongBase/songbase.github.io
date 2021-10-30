@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Playlist</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <meta content="Donald G Gray" name="author">
+    <meta content="Audio playlist where the song titles change colour when they are played or paused." name="description">
+    <meta property="og:image" content="http://audovia.com/image/Kelpies1280.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Playlist">
+    <meta property="og:description" content="Audio playlist where the song titles change colour when they are played or paused.">
+    <style type="text/css">
+      span.composer {color: #817F73; font-family: Open Sans; font-size: 16px; line-height: 150%;}
+      span.song {color: #551A8B; cursor: pointer; font-family: Open Sans; font-size: 16px; line-height: 150%;}
+      td {padding: 3px 0px 0px 5px;}
+    </style>
+  </head>
+
+  <body>
+
+  <div style="border-style: none; width: 420px; height: 320px; overflow: auto;">
+
+    <div id="playlist">
+    </div>
+
+    <div id="audio">
+    </div>
+
+    <script type="text/javascript">
+    var text = '{ "songs" : [' +
+    '{ "composer":"J S Bach"    , "song":"Prelude BWV 556"               , "mp3":"JSBach-Prelude-BWV556-v2R.mp3"              } ,' +
+    '{ "composer":"J S Bach"    , "song":"Sheep May Safely Graze"        , "mp3":"SheepMaySafelyGraze.mp3"                    } ,' +
+    '{ "composer":"W A Mozart"  , "song":"Recordare"                     , "mp3":"Recordare.mp3"                              } ,' +
+    '{ "composer":"A Vivaldi"   , "song":"Gloria"                        , "mp3":"Gloria-Vivaldi-v3R.mp3"                     } ,' +
+    '{ "composer":"G F Handel"  , "song":"Zadok the Priest"              , "mp3":"zadok.mp3"                                  } ,' +
+    '{ "composer":"G F Handel"  , "song":"Arrival of the Queen of Sheba" , "mp3":"The Arrival of the Queen of Sheba-Song.mp3" } ,' +
+    '{ "composer":"G F Handel"  , "song":"Messiah 1 Sinfony"             , "mp3":"Messiah 1 Sinfony-Song.mp3"                 } ,' +
+    '{ "composer":"C Petzold"   , "song":"Minuet in G"                   , "mp3":"Minuet in G - Christian Petzold-Song.mp3"   } ,' +
+    '{ "composer":"C Nairne"    , "song":"The Hundred Pipers"            , "mp3":"The Hundred Pipers-Song.mp3"                } ,' +
+    '{ "composer":"S Joplin"    , "song":"The Entertainer"               , "mp3":"The Entertainer.mp3"                        }  ' +
+    ']}';
+
+    var obj = JSON.parse(text);
+    <!--var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4;" width="400"><tbody>';-->
+<!--    var table_content = '<table style="background-color: #f4f4f4; border-style: solid; border-width: 8px; border-color: #f4f4f4; width: 400px; border: 8px; cellpadding: 0px; cellspacing: 22px;"><tbody>'; -->
+    var table_content = '<table style="background-color: #f4f4f4;" width="400" border="0" cellpadding="0" cellspacing="22"><tbody>';
+    var audio_content = '';
+
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      table_content += '<tr><td><span class="composer">' + obj.songs[i].composer + '</span></td>';
+      table_content += '<td><span title="Click to play or pause and double-click to rewind." ' +
+                                 'onclick="playPause(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'ondblclick="onEnd(songArray[' + i + '], audioArray[' + i + '])" ' +
+                                 'class="song" id="song' + i + '">' + obj.songs[i].song + '</span></td></tr>';
+
+      audio_content += '<audio id="audio' + i + '" onended="onEnd(songArray[' + i + '], audioArray[' + i + '])" src="music/' + obj.songs[i].mp3 + '"></audio>';
+    }
+
+    table_content += '</tbody></table>';
+    document.getElementById("playlist").innerHTML = table_content;
+    document.getElementById("audio").innerHTML = audio_content;
+
+    var audioArray = new Array();
+    var songArray = new Array();
+
+    for (i = 0; i < obj.songs.length; i++)
+    {
+      audioArray[i] = document.getElementById("audio" + i);
+      songArray[i] = document.getElementById("song" + i);
+    }
+
+      function onEnd(song, audio)
+      {
+        song.style.color = '#551A8B';
+        audio.load();
+      }
+
+      function playPause(song, audio)
+      {
+        for (i = 0; i < songArray.length; i++)
+        {
+          if (song != songArray[i])
+          {
+            if (!audioArray[i].paused)
+            {
+              songArray[i].style.color = 'red';
+              audioArray[i].pause();
+            }
+          }
+        }
+
+        if (audio.paused)
+        {
+          song.style.color = 'green';
+          audio.play();
+        }
+        else
+        {
+          song.style.color = 'red';
+          audio.pause();
+        }
+      }
+    </script>
+
+    </div>
+
+  </body>
+</html>
